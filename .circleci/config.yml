@@ -361,17 +361,15 @@ workflows:
     jobs:
       - build
       - dctest-functions:
-          filters:
-            branches:
-              ignore:
-                - release
-                - master
-      - dctest-upgrade:
-          filters:
-            branches:
-              ignore:
-                - release
-                - master
+          name: dctest-functions1
+      - dctest-functions:
+          name: dctest-functions2
+      - dctest-functions:
+          name: dctest-functions3
+      - dctest-functions:
+          name: dctest-functions4
+      - dctest-functions:
+          name: dctest-functions5
 
   # Update github release page.
   release:
